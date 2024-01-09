@@ -9,14 +9,43 @@
 <body>
 	<div class="header">
 		<div class="headerimg">
-			<img src="Logo4x.png" alt="Logo/Menu" width="100px">
+			<a onClick="menu();"><img src="Logo4x.png" alt="Logo/Menu" width="100px"></a>
+		</div>
+	</div>
+
+	<div id="burger" style="display:none;" class="burger">
+		
+		<div class="headerimg">
+			<a onClick="menu();"><img src="Logo4x.png" alt="Logo/Menu" width="100px"></a>
+		</div>
+		
+		<div class="burgertext">
+			<a href="index.html">HOME</a><br>
+			<a href="index.html">MAIN SERIES</a><br>
+			<a href="characters.html">CHARACTERS</a><br>
+			<a href="games.html">GAMES</a><br>
+			<a href="locations.html">LOCATIONS</a><br>
 		</div>
 	</div>
 	
 	<div class="balls">
-		<a href="games.html"><img src="KLONK.png" width="400px"></a>
-		<a href=""><img src="Snitch.png" width="400px"></a>
-		<a href=""><img src="Bludger.png" width="400px"></a>
+		<a href="games.html"><img src="Bludger.png" alt="Bludger" width="400px"></a>
+		<a href="mainseries.html"><img src="Snitch.png" alt="Snitch" width="400px" style="margin-top:-350px; margin-left:-50px"></a>
+		<a href="characters.html"><img src="KLONK.png" alt="Klonk" width="400px"></a>
 	</div>
 </body>
+
+	
+<script>
+	
+	function menu(){
+		const burger = document.getElementById("burger");
+		if(burger.style.display === "none"){
+			burger.style.display = "flex";
+		} else{
+			burger.style.display = "none";
+		}
+	}
+	
+</script>
 </html>
