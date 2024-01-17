@@ -1,0 +1,204 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face{
+	font-family: algeria;
+	src: url(algeria.ttf);
+}
+
+/*
+	#c4dfdf
+	#d2e9e9
+	#e3f4f4
+	#f8f6f4
+*/
+
+html{
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	font-family: algeria;
+}
+
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+.scroll{
+	scroll-snap-align: start; 
+	scroll-padding: 140px;
+}
+
+.header{
+	position:absolute;
+	width:100%;
+	z-index: 2;
+}
+
+.up{
+	display: flex;
+	z-index: 1;
+	justify-content: center;
+	position: fixed;
+	width: 100%
+}
+
+
+
+.headertop{
+	background-color: #d2e9e9;
+	height: 90px;
+	display: flex;
+	justify-content: center;
+}
+
+
+
+.headerbottom{
+	background-color: #f8f6f4;
+	height: 50px;
+	font-size: 50px;
+	line-height: 1.1;
+}
+
+.headerbottom a{
+	list-style: none;
+	text-decoration: none;
+	color: black;
+}
+
+.headerbuttons{
+	display: flex;
+	justify-content: space-around;
+}
+
+.headerbuttons a{
+	width: 300px;
+	text-align: center;
+}
+
+.scrollcontainer{
+	scroll-snap-align: start; 
+	scroll-padding: 140px;
+}
+
+.frontpage{
+	display: grid;
+	height:100vh;
+	width:100%;
+	background-size: cover;
+	object-fit: cover;
+	background-repeat: no-repeat;
+	scroll-snap-align: start;
+	align-content: center;
+	justify-content: center;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+.frontpagetext{
+	font-size: 100px;
+	color: black;
+	background-color: #f8f6f4;
+	padding: 15px;
+	border-radius: 20px;
+
+}
+
+.page{
+
+	min-height: 100vh;
+	background-color: #e3f4f4;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	align-content: center;
+	align-items: center;
+	object-fit:contain;
+
+}
+
+.columnone{
+	grid-column: 1 2;
+	grid-row: 1 1;
+
+}
+
+.text{
+	background-color: #c4dfdf;
+	width:95%;
+	text-align: center;
+	font-size: 25px;
+	border-radius: 20px;
+	margin: 1%;
+	padding: 1%
+}
+
+.image{
+	background-color: #e3f4f4;
+	width:95%;
+	padding: 2%;
+	align-content: center;
+	align-items: center;
+	object-fit:cover;
+}
+
+.page img{
+	object-fit:cover;
+	border-radius: 20px;
+}
+
+.columntwo{
+	grid-column: 2 3;
+	grid-row: 1 1;
+
+}
+
+.page p{
+	line-height: 0.85
+}
+
+.page h1{
+	font-size: 40px;
+}
+
+.page h2{
+	font-size: 30px;
+}
+
+
+@media only screen and (max-width:1500px){
+	
+	html{
+		scroll-snap-type: none;
+	}
+	
+	.headerbottom{
+		font-size:40px;
+	}
+	
+	.page{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	
+} 
+
+@media only screen and (max-width:800px){
+	
+	.headerbottom{
+		display: none;
+	}
+	
+	.frontpagetext{
+		font-size: 50px;
+	}
+	
+}
