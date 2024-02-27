@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<link href="mall.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="header">
+		<div class="headerimg">
+			<a onClick="menu();"><img src="Logo4x.png" alt="Logo/Menu" width="100px"></a>
+		</div>
+	</div>
+	
+	<div id="burger" style="display:none;" class="burger">
+		
+		<div class="headerimg">
+			<a onClick="menu();"><img src="Logo4x.png" alt="Logo/Menu" width="100px"></a>
+		</div>
+		
+		<div class="burgertext">
+			<a href="index.html">HOME</a><br>
+			<a href="series.html">MAIN SERIES</a><br>
+			<a href="characters.html">CHARACTERS</a><br>
+			<a href="games.html">GAMES</a><br>
+			<a href="locations.html">LOCATIONS</a><br>
+			<a href="login.html">LOGIN</a>
+		</div>
+	</div>
+	
+	<div class="titletext">
+		LOGIN
+	</div>
+	
+	<div class="gamepage">
+		
+		<div class="side">
+			<div>
+				<div class="loginbox">
+					<form>
+						<label style="font-size:70px;">REGISTER</label><br><br>
+						<label for="username">USERNAME</label><br>
+						<input type="text" id="newUsername" name="username" required><br><br>
+						<label for="password">PASSWORD</label><br>
+						<input type="password" id="newPassword" name="password" required><br><br>
+						<label for="confirm_password">CONFIRM PASSWORD</label><br>
+						<input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+						<button type="submit">Register</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="side">
+			<div>
+				<div class="loginbox">
+					<form>
+						<label style="font-size:70px;">LOGIN</label><br><br><br>
+						<label for="username">USERNAME</label><br>
+						<input type="text" id="username" name="username" required><br><br>
+						<label for="password">PASSWORD</label><br>
+						<input type="password" id="password" name="password" required><br><br><br><br>
+						<button type="submit">Log in</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+</body>
+
+<script>
+	
+	function menu(){
+		const burger = document.getElementById("burger");
+		if(burger.style.display === "none"){
+			burger.style.display = "flex";
+		} else{
+			burger.style.display = "none";
+		}
+	}
+	
+</script>
+</html>
